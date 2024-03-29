@@ -1,0 +1,83 @@
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/media-mix.jpg');
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+.back-to-home {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.back-to-home a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #e50914;
+}
+
+.back-to-home a:hover {
+  background-color: #c40711;
+}
+
+.ticket-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ticket {
+  margin-top: 20px;
+  background-color: #fff;
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  border: 4px solid #d3af0f;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.ticket h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.ticket p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ticket p strong {
+  font-weight: bold;
+}
+
+.ticket p span {
+  color: #555;
+}
+
+.download-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.download-button button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.download-button button:hover {
+  background-color: #c40711;
+}

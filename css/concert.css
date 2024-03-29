@@ -1,0 +1,160 @@
+.top_img, .event_description, .about_artist {
+    text-align: center;
+}
+
+img.main_img{
+    height: 450px;
+    width: 65%;
+}
+
+div.logo-container {
+    text-align: center;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 30pt;
+}
+
+.description {
+    font-size: 16pt;
+}
+
+span.artist_title {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+img.artist {
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    float: right;
+}
+
+figure.artist_fig {
+    display: inline-block;
+    margin: 10px;
+}
+
+figcaption.img_caption {
+    font-size: 15pt;
+    text-align: center;
+}
+
+img.logo {
+    height: 100px;
+    width: auto;
+    vertical-align: middle;
+}
+
+div.footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 15pt;
+}
+
+img.follow_img {
+    height: 75px;
+    border-radius: 15px;
+    width: auto;
+    vertical-align: middle;
+    margin: 15px;
+}
+
+hr.horizontal_line {
+    height: 2px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+    width: 50%;
+}
+
+img.location {
+    position: relative;
+    bottom: 4px;
+    width: 23pt;
+    height: 23pt;
+}
+
+button.Book_Now {
+    padding: 12px 75px;
+    font-size: 20pt;
+    border-radius: 8px;
+    background-color: rgb(255, 23, 23)
+}
+
+a.booking_button {
+    color: white;
+    text-decoration: none;
+}
+
+a.booking_button:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a.booking_button:hover {
+    color: white;
+}
+
+a.booking_button:active {
+    color: white;
+    text-decoration: none;
+}
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.8;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}

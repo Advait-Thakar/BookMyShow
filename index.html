@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Event Magnet</title>
+    <link rel="icon" type="image/x-icon" href="images/fav.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="html/test.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/home-style.css">
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/autocomplete.js"></script>    
+    <script src="calender.js"></script>
+</head>
+
+<body>
+    
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+    
+    <!-- Content -->
+    <div class="content">
+         
+        <nav class="navbar">
+            <img src="images/logo2.png" class="brand-logo" alt="" />
+            <div class='search-box'>
+                <div class="row">
+                    <ion-icon name="search"></ion-icon>
+                    <input type="text" className='search' id="input-box" placeholder='Search for Movies, Events, Plays, Sports, and Activities' autocomplete="off">
+                </div>
+                <div class="result-box">    
+                </div>
+            </div>
+
+            <div class="right-container">
+                <button class="signin" onclick=""><a href = "html/login.html">Sign in</a></button>
+
+                <div id="id01" class="modal">
+
+                    <div class="modal-content">
+                        <div class="getstart">
+                            <h3>Get Started</h3>
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                title="Close Modal">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </span>
+                        </div>
+
+                        <div class="container">
+                            <a href="#" class="button">
+                                <div class="logo">
+                                    <img src="images/googlelogo.svg">
+                                </div>
+                                <div class="text">Continue with Google</div>
+                            </a>
+                            <a href="#" class="button">
+                                <div class="logo">
+                                    <ion-icon name="mail-outline" style="font-size: 22px;"></ion-icon>
+                                </div>
+                                <div class="text">Continue with Email</div>
+                            </a>
+                            <a href="#" class="button">
+                                <div class="logo">
+                                    <ion-icon name="logo-apple" style="font-size: 22px;"></ion-icon>
+                                </div>
+                                <div class="text">Continue with Apple</div>
+                            </a>
+                        </div>
+                        <h2>OR</h2>
+
+                        <div class="phone">
+                            <img alt="indian flag" src="images/indianflag.svg">
+                            <div class="code">+91</div>
+                            <input id="mobileNo" type="tel" pattern="[0-9]*" placeholder="Continue with mobile number"
+                                class="mobileNo">
+                        </div>
+
+                        <p>I agree to the <u>Terms & Conditions</u>&<u>Privacy Policy</u></p>
+
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+        <nav class="subnavbar">
+            <ul class='navitem'>
+                <li><a href='#Movies'>Movies</a></li>
+                <li><a href='#Events'>Events</a></li>
+                <li><a href='#Movies'>Plays</a></li>
+                <li><a href='#Sports'>Sports</a></li>
+                <li><a href='#Movies'>Activities</a></li>
+
+            </ul>
+        </nav>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <img src="images/banner4.webp" class="d-block w-100" alt="..." height="300px">
+                </div>
+                <div class="carousel-item ">
+                    <img src="images/banner2.webp" class="d-block w-100" alt="..." height="300px">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner3.webp" class="d-block w-100" alt="" height="300px">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/marathon.jpg" class="d-block w-100" alt="" height="300px">
+                </div>
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button> -->
+        </div>
+    </div>
+
+
+    <h1 class="title"> &nbsp; Recommended Movies</h1>
+    <div class="movies-list" id = "Movies">
+        <div class="card-container">
+
+            <div class="movie">
+                <a href="html/Article_370.html">
+                <div class="card">
+                 <img src="images/article.jpg" class="card-img" alt="">
+                    <div class="card-body">
+                        <ion-icon name="heart-sharp"></ion-icon>
+                        <p>93% &ThinSpace; 25k votes</p>
+                    </div>
+                </div></a>
+                <h3>Article 370</h3>
+                <p class="detail">Drama/Political</p>
+            </div>
+
+            <div class="movie">
+                <a href="html/Animal.html">
+                <div class="card">
+                    <img src="images/animal.jpg" class="card-img" alt="">
+                    <div class="card-body">
+                        <ion-icon name="heart-sharp"></ion-icon>
+                        <p>92% &ThinSpace; 16k votes</p>
+                    </div>
+                </div></a>
+                <h3>Animal</h3>
+                <p class="detail">Action/Crime</p>
+            </div>
+
+            <div class="movie">
+                <a href="html/Dune_Part_2.html">
+                <div class="card">
+                    <img src="images/dune2.jpg" class="card-img" alt="">
+                    <div class="card-body">
+                        <ion-icon name="heart-sharp"></ion-icon>
+                        <p>94% &ThinSpace; 14k votes</p>
+                    </div>
+                </div></a>
+                <h3>Dune 2</h3>
+                <p class="detail">Sci-fi/Adventure</p>
+            </div>
+
+            <div class="movie">
+                <a href="html/Kaagaz_2.html">
+                <div class="card">
+                    <img src="images/kaagaz.jpg" class="card-img" alt="">
+                    <div class="card-body">
+                        <ion-icon name="heart-sharp"></ion-icon>
+                        <p>59% &ThinSpace; 74k votes</p>
+                    </div>
+                </div></a>
+                <h3>Kaagaz 2</h3>
+                <p class="detail">Drama</p>
+            </div>
+
+            <div class="movie">
+                <a href="html/Operation_Valentine.html">
+                <div class="card">
+                    <img src="images/operation.jpg" class="card-img" alt="">
+                    <div class="card-body">
+                        <ion-icon name="heart-sharp"></ion-icon>
+                        <p>87% &ThinSpace; 34k votes</p>
+                    </div>
+                </div></a>
+                <h3>Operation Valentine</h3>
+                <p class="detail">Action/Thriller</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="strip">
+        <img src="images/strip.webp" style="height:105px;" alt="">
+    </div>
+
+    <div class="events">
+        <h1 class="title">&nbsp; Popular Events</h1>
+        <div class="movies-list" id ="Events">
+            <div class="card-container">
+
+                <div class="movie">
+                    <a href="html/Alan_Walker.html">
+                    <div class="card">
+                        <img src="images/alan.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>93% &ThinSpace; 25k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Sunburn Arena-Ft.Alan Walker</h3>
+                    <p class="detail">Venue To be Announced</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/Sunburn_Goa.html">
+                    <div class="card">
+                        <img src="images/goa.jpeg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>92% &ThinSpace; 16k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Sunburn Chandigarh</h3>
+                    <p class="detail">Holi Festival</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/Probuzz_S2.html">
+                    <div class="card">
+                        <img src="images/probuzz.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>94% &ThinSpace; 14k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Probuzz Fiesta Season-2</h3>
+                    <p class="detail">Vrundavan Premium Lawn</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/Open_Mic.html">
+                    <div class="card">
+                        <img src="images/open-mic.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>59% &ThinSpace; 74k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Open Mic-StandUp</h3>
+                    <p class="detail">The Comedy Factory </p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/Baap_Ko_Mat_Sikha.html">
+                    <div class="card">
+                        <img src="images/baap.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>87% &ThinSpace; 34k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Baap ko mat sikha-Ft.Pranit </h3>
+                    <p class="detail">StandUp & Crowd Work-Solo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sports">
+        <h1 class="title">&nbsp; Sports</h1>
+        <div class="movies-list" id = "Sports">
+            <div class="card-container">
+
+                <div class="movie">
+                    <a href="html/mi_vs_rr.html">
+                    <div class="card">
+                        <img src="images/mi_vs_rr.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>93% &ThinSpace; 25k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>MI vs RR</h3>
+                    <p class="detail">Wankhede Stadium-Mumbai</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/gt_vs_lsg.html">
+                    <div class="card">
+                        <img src="images/gt_vs_lsg.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>92% &ThinSpace; 16k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>LSG vs GT</h3>
+                    <p class="detail">BRSABV Ekana Cricket Stadium-Lucknow</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/rr_vs_dc.html">
+                    <div class="card">
+                        <img src="images/rr_vs_dc.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>94% &ThinSpace; 14k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>RR vs DC</h3>
+                    <p class="detail">Sawai Mansingh Stadium-Jaipur</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/AIQ_chess.html">
+                    <div class="card">
+                        <img src="images/aiq_chess.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>59% &ThinSpace; 74k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>AIQ Chess Championship</h3>
+                    <p class="detail">Multiple Venues</p>
+                </div>
+
+                <div class="movie">
+                    <a href="html/mc_vs_ofc.html">
+                    <div class="card">
+                        <img src="images/odhisa.jpg" class="card-img" alt="">
+                        <div class="card-body">
+                            <ion-icon name="heart-sharp"></ion-icon>
+                            <p>87% &ThinSpace; 34k votes</p>
+                        </div>
+                    </div></a>
+                    <h3>Mumbai FC vs Odhisa FC</h3>
+                    <p class="detail">Mumbai Football Arena</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End content -->
+    <!-- Footer -->
+    <br /><br />
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href='#Movies'>Movies</a></li>
+                    <li><a href='#Events'>Events</a></li>
+                    <li><a href='#Movies'>Plays</a></li>
+                    <li><a href='#Sports'>Sports</a></li>
+                    <li><a href='#Movies'>Activities</a></li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Byte Benders</span></p>
+        </div>
+    </footer>
+ 
+</body>
+
+</html>

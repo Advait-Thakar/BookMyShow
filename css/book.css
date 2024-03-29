@@ -1,0 +1,59 @@
+.btn-outline-primary {
+    color: black; /* Set text color to black */
+    border-color: black !important; /* Set border color to black */
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.25rem black; /* Change focus box-shadow color to black */
+}
+
+.btn-outline-primary:hover {
+    color: white; /* Set text color to white on hover */
+    background-color: black; /* Set background color to black on hover */
+}
+
+.btn-settings, /* Apply styles to the settings button */
+.btn-search { /* Apply styles to the search button */
+    color: black !important; /* Set text color to black */
+    border-color: black !important; /* Set border color to black */
+}
+
+.btn-settings:hover,
+.btn-search:hover {
+    color: white !important; /* Set text color to white on hover */
+    background-color: black !important; /* Set background color to black on hover */
+}
+
+/* Override Bootstrap icon color */
+.fas {
+    color: black; /* Set icon color to black */
+}
+.fas:hover{
+    color: white;
+}
+.calender-btn{
+    color: black !important;
+}
+.calender-btn:hover{
+    color:white !important;
+    background-color: rgb(175, 5, 5) !important;
+}
+/* CSS rules for button status */
+.status-available {
+    /* Styles for available timing */
+    color: green;
+    /* Add any other styles for available timing */
+}
+
+.status-filling {
+    /* Styles for filling timing */
+    color: orange;
+    /* Add any other styles for filling timing */
+}
+
+.status-full {
+    /* Styles for full timing */
+    color: red;
+    /* Add any other styles for full timing */
+}
