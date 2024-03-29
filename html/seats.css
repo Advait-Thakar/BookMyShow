@@ -40,8 +40,9 @@ body {
 .seat {
   background-color: #444451;
   background-image: url(../images/seat-icon.png);
-  height: 12px;
-  width: 15px;
+  background-size: cover;
+  height: 25px;
+  width: 25px;
   margin: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
