@@ -63,14 +63,14 @@ function updateSeatCount() {
 function bookTickets() {
   const urlParams = new URLSearchParams(window.location.search);
   const movieName = urlParams.get("movie");
-  const timing = urlParams.get("time");
+  const timing = urlParams.get("time"); // Change to 'timing' from 'time'
   const theatre = urlParams.get("theatre");
   const date = urlParams.get("date");
-  const username = urlParams.get("name");
+  const username = urlParams.get("name"); // Change to 'name' from 'username'
   const price = urlParams.get("price");
 
   const selectedSeats = document.querySelectorAll(".roww .seat.selected");
-  const totalPrice = price*selectedSeats.length
+  const totalPrice = price * selectedSeats.length;
 
   const selectedSeatsDetails = [];
 
@@ -87,7 +87,7 @@ function bookTickets() {
     timing: timing,
     date: date,
     seats: selectedSeatsDetails,
-    totalPrice: totalPrice
+    totalPrice: totalPrice,
   };
 
   // Get existing bookings for the user
@@ -131,4 +131,26 @@ container.addEventListener("click", (e) => {
     e.target.classList.toggle("selected");
     updateSeatCount();
   }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const movieName = urlParams.get("movie");
+  const timing = urlParams.get("time"); // Change to 'timing' from 'time'
+  const theatre = urlParams.get("theatre");
+  const date = urlParams.get("date");
+  const username = urlParams.get("name"); // Change to 'name' from 'username'
+  const price = urlParams.get("price");
+
+  // Get reference to the respective <p> tags in the movie details container
+  const movieNameElement = document.getElementById("movieName");
+  const showDateElement = document.getElementById("showDate");
+  const showTimeElement = document.getElementById("showTime");
+  const theatreElement = document.getElementById("theatre");
+
+  // Set the innerHTML of the <p> tags with the respective details
+  movieNameElement.innerHTML = `<strong>Movie Name:</strong> ${movieName}`;
+  showDateElement.innerHTML = `<strong>Show Date:</strong> ${date}`;
+  showTimeElement.innerHTML = `<strong>Show Time:</strong> ${timing}`;
+  theatreElement.innerHTML = `<strong>Theatre:</strong> ${theatre}`;
 });

@@ -10,25 +10,37 @@
 </head>
 
 <body>
-    <!-- <img src="../images/media-mix.jpg" alt="IMAGE"> -->
-    <div class="back-to-home">
-        <a onclick="redirectToHome()" class="btn btn-secondary">Back to Home</a>
-    </div>
-    <div class="ticket-container">
-        <div class="ticket">
-            <h1 class="mb-5" id="theatre-name">YOUR TICKET HAS BEEN BOOKED!</h1>
-            <div class="border border-2 p-4 rounded mb-4">
-                <p class="mb-3"><strong>Movie:</strong> <span id="movieName"></span></p>
-                <p class="mb-3"><strong>Theatre:</strong> <span id="theatre"></span></p>
-                <p class="mb-3"><strong>Timing:</strong> <span id="timing"></span></p>
-                <p class="mb-3"><strong>Date:</strong> <span id="date"></span></p>
-                <p><strong>Seats:</strong> <span id="seats"></span></p>
-                <p class="mb-3"><strong>Total price: </strong><span id="totprice">&#8377;</span></p>
-            </div>         
+    <div class="container-fluid">
+        <div class="back-to-home">
+            <a onclick="redirectToHome()" class="btn btn-secondary">Back to Home</a>
         </div>
-    </div>
-    <div class="download-button">
-        <button onclick="generatePDF()">Download Ticket</button>
+        <div class="ticket-container">
+            <div class="ticket">
+                <h1 class="mb-5" id="theatre-name">YOUR TICKET HAS BEEN BOOKED!</h1>
+                <div class="border border-2 p-4 rounded mb-4">
+                    <p class="mb-3"><strong>Movie:</strong> <span id="movieName"></span></p>
+                    <p class="mb-3"><strong>Theatre:</strong> <span id="theatre"></span></p>
+                    <p class="mb-3"><strong>Timing:</strong> <span id="timing"></span></p>
+                    <p class="mb-3"><strong>Date:</strong> <span id="date"></span></p>
+                    <p><strong>Seats:</strong> <span id="seats"></span></p>
+                    <p class="mb-3"><strong>Total price: </strong><span id="totprice">&#8377;</span></p>
+                </div>         
+            </div>
+        </div>
+        <div class="download-button">
+            <button onclick="generatePDF()">Download Ticket</button>
+        </div>
+        <div>
+            <p>
+
+            </p>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p class="text-muted text-center" style="color: aliceblue;">© 2024 Company Event Magnet. All rights reserved.</p>
+                <p class="text-muted text-center">Terms and Conditions</p>
+            </div>
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #242333;
+  background-color: #821b12;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -39,6 +39,7 @@ body {
 
 .seat {
   background-color: #444451;
+  background-image: url(../images/seat-icon.png);
   height: 12px;
   width: 15px;
   margin: 3px;
@@ -99,7 +100,7 @@ body {
 
 .screen {
   background-color: #fff;
-  height: 70px;
+  height: 25px;
   width: 100%;
   margin: 15px 0;
   transform: rotateX(-45deg);
@@ -131,4 +132,44 @@ p.text span {
 .book-button:hover {
     background-color: #e50914;
     color: #fff;
+}
+
+/* Add any inline styles here if needed */
+.terms-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #272424;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+}
+
+.terms-container h2 {
+  margin-top: 0;
+}
+
+.terms-container p {
+  line-height: 1.5;
+}
+
+/* Add any inline styles here if needed */
+.details-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #272424;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+}
+
+.details-container h2 {
+  margin-top: 0;
+}
+
+.details-container p {
+  line-height: 1.5;
 }
