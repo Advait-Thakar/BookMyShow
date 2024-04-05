@@ -18,7 +18,8 @@ function renderSeats(rows, columns) {
     seatHtml += "<div class='roww'>";
     for (let j = 0; j < columns; j++) {
       const seatStatus = checkSeatStatus(i, j, movie, timing, theatre, date);
-      seatHtml += `<div class="seat ${seatStatus}" data-row=${i} data-column=${j} ></div>`;
+      const seatNum = j+1;
+      seatHtml += `<div class="seat ${seatStatus}" data-row=${i} data-column=${j} >${seatNum}</div>`;
     }
     seatHtml += "</div>";
   }
@@ -30,21 +31,26 @@ function checkSeatStatus(row, column, movie, timings, theatreName, date) {
   const bookings = JSON.parse(localStorage.getItem("bookings")) || {};
   for (const username in bookings) {
     for (const movieName in bookings[username]) {
-      for (const theatre in bookings[username][movieName]) {
-        for (const timing in bookings[username][movieName][theatre]) {
-          const bookedSeats = bookings[username][movieName][theatre][
-            timing
-          ].flatMap((booking) => booking.seats);
-          for (const seat of bookedSeats) {
-            if (
-              seat.row == row &&
-              seat.column == column &&
-              movie == movieName &&
-              timings == timing &&
-              theatreName == theatre &&
-              date == bookings[username][movieName][theatre][timing][0].date
-            ) {
-              return "occupied";
+      if(movieName==movie){
+        for (const theatre in bookings[username][movieName]) {
+          if(theatre==theatreName){
+            for (const timing in bookings[username][movieName][theatre]) {
+              const bookedSeats = bookings[username][movieName][theatre][
+                timing
+              ].flatMap((booking) => booking.seats);
+              for (const seat of bookedSeats) {
+                if (
+                  seat.row == row &&
+                  seat.column == column
+                  // movieName==movie &&
+                  // timing==timings &&
+                  // theatre==theatreName &&
+                  // bookings[username][movieName][theatre][timing][0].date==date
+                ) {
+                  console.log("occupied");
+                  return "occupied";
+                }
+              }
             }
           }
         }

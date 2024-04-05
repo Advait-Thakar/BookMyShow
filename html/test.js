@@ -1,4 +1,4 @@
-const bookings = {
+const new_bookings = {
   "Advait": {
     "Article_370": {
       "Theatre C Banglore": {
@@ -7,7 +7,7 @@ const bookings = {
             movieName: "Article_370",
             theatre: "Theatre C Banglore",
             timing: "12:00 PM",
-            date: "2024-03-30",
+            date: "2024-04-07",
             seats: [
               { row: "0", column: "4" },
               { row: "0", column: "5" },
@@ -23,7 +23,7 @@ const bookings = {
             movieName: "Article_370",
             theatre: "Theatre C Banglore",
             timing: "3:00 PM",
-            date: "2024-03-30",
+            date: "2024-04-07",
             seats: [
               { row: "0", column: "0" },
               { row: "0", column: "1" },
@@ -43,7 +43,7 @@ const bookings = {
             movieName: "Animal",
             theatre: "Theatre B Delhi",
             timing: "11:00 AM",
-            date: "2024-03-29",
+            date: "2024-04-06",
             seats: [
               { row: "0", column: "5" },
               { row: "0", column: "6" },
@@ -61,7 +61,7 @@ const bookings = {
             movieName: "Dune_Part_2",
             theatre: "Theatre D Kolkata",
             timing: "7:00 PM",
-            date: "2024-03-31",
+            date: "2024-04-08",
             seats: [
               { row: "0", column: "0" },
               { row: "0", column: "1" },
@@ -84,7 +84,7 @@ const bookings = {
             movieName: "Dune_Part_2",
             theatre: "Theatre D Kolkata",
             timing: "7:00 PM",
-            date: "2024-03-31",
+            date: "2024-04-08",
             seats: [
               { row: "0", column: "5" },
               { row: "0", column: "6" },
@@ -101,7 +101,7 @@ const bookings = {
             movieName: "Kaagaz_2",
             theatre: "Theatre E Chennai",
             timing: "5:00 PM",
-            date: "2024-04-01",
+            date: "2024-04-09",
             seats: [
               { row: "0", column: "5" },
               { row: "0", column: "6" },
@@ -116,8 +116,10 @@ const bookings = {
   },
 };
 
+localStorage.removeItem("bookings");
+
 // Convert the bookings object to a JSON string
-const bookingsJSON = JSON.stringify(bookings);
+const bookingsJSON = JSON.stringify(new_bookings);
 
 // Store the JSON string in localStorage
 localStorage.setItem("bookings", bookingsJSON);
