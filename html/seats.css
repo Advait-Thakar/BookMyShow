@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #821b12;
+  background-color: #ffffff;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@ body {
 }
 
 .seat {
-  background-color: #444451;
+  background-color: #ffffff;
   background-image: url(../images/seat-icon.png);
   background-size: cover;
   height: 25px;
@@ -49,11 +49,11 @@ body {
 }
 
 .seat.selected {
-  background-color: #6feaf6;
+  background-color: #00ff3c;
 }
 
 .seat.occupied {
-  background-color: #fff;
+  background-color: #717171;
 }
 
 .seat:nth-of-type(2) {
@@ -100,7 +100,7 @@ body {
 }
 
 .screen {
-  background-color: #fff;
+  background-color: #00fffb;
   height: 25px;
   width: 100%;
   margin: 15px 0;
@@ -113,12 +113,12 @@ p.text {
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #000000;
 }
 
 .book-button {
     background-color: transparent;
-    color: white;
+    color: #e50914;
     border: 2px solid #e50914;
     padding: 10px 20px;
     font-size: 16px;
@@ -142,7 +142,9 @@ p.text span {
   right: 0;
   width: 300px;
   height: 100%;
-  background-color: #272424;
+  border-left: solid rgb(111, 111, 111);
+  background-color: #eaeaea;
+  color: black;
   padding: 20px;
   overflow-y: auto; /* Enable vertical scroll if content overflows */
 }
@@ -162,7 +164,9 @@ p.text span {
   left: 0;
   width: 300px;
   height: 100%;
-  background-color: #272424;
+  border-right: solid rgb(111, 111, 111);
+  background-color: #eaeaea;
+  color: black;
   padding: 20px;
   overflow-y: auto; /* Enable vertical scroll if content overflows */
 }
@@ -173,4 +177,22 @@ p.text span {
 
 .details-container p {
   line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .details-container {
+      text-align: center;
+  }
+  .details-container p,
+  .details-container .text,
+  .details-container .book-button {
+      margin: 10px 0;
+  }
+  .showcase,
+  .container {
+      margin-top: 20px;
+  }
+  .terms-container {
+      padding: 20px;
+  }
 }

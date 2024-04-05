@@ -4,9 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app) #CROSS ORIGIN RESOURCE SHARING
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/BookMyShow'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/BookMyShow'  #change the  username and password accordingly 'mysql://<username>:<password>@localhost/BookMyShow'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -59,7 +59,7 @@ class MoviesShowTimings(db.Model):
 # if __name__ == '__main__':
 #     app.run(debug=True)
 
-@app.route('/movie-show-timings/movie/<string:movie_name>/date/<date>')
+@app.route('/movie-show-timings/movie/<string:movie_name>/date/<date>') #Endpoint for server
 def get_movie_show_timings_by_date(movie_name, date):
     try:
         movie_date = datetime.datetime.strptime(date, '%Y-%m-%d').date()
